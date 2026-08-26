@@ -436,6 +436,18 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
   <div class="ecom-grid" id="ecomGrid"></div>
 </section>
 
+<!-- ================= Product Poster（文件夹驱动） ================= -->
+<section class="vi" id="pposter">
+  <div class="sec-head reveal ecom-head">
+    <div>
+      <span class="eyebrow">Product Poster</span>
+      <h2>产品海报视觉</h2>
+    </div>
+    <p>为产品打造主图与海报级视觉，突出卖点与质感。</p>
+  </div>
+  <div class="vi-grid" id="pposterGrid"></div>
+</section>
+
 <!-- ================= 品牌 VI 设计（文件夹驱动） ================= -->
 <section class="vi" id="vi">
   <div class="sec-head reveal ecom-head">
@@ -460,12 +472,12 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
   <div class="vi-grid" id="posterGrid"></div>
 </section>
 
-<!-- ================= 建模渲染（文件夹驱动，待添加） ================= -->
-<section class="vi" id="render" style="display:none;">
+<!-- ================= 3D Product Tag（文件夹驱动） ================= -->
+<section class="vi" id="render">
   <div class="sec-head reveal ecom-head">
     <div>
-      <span class="eyebrow">建模渲染</span>
-      <h2>三维产品视觉</h2>
+      <span class="eyebrow">3D Product Tag</span>
+      <h2>三维产品渲染</h2>
     </div>
     <p>从建模到材质光影，为产品打造高品质三维渲染图。</p>
   </div>
@@ -735,13 +747,11 @@ renderSection('/api/vi', document.getElementById('viGrid'), '品牌 VI');
 /* 海报设计：从服务器读取并渲染 */
 renderSection('/api/poster', document.getElementById('posterGrid'), '海报设计');
 
-/* 建模渲染：从服务器读取并渲染（若有数据则显示板块） */
-const renderGrid = document.getElementById('renderGrid');
-if(renderGrid){
-  renderSection('/api/render', renderGrid, '建模渲染', {
-    onReady: ()=> { if(renderGrid.querySelectorAll('.vi-card').length){ document.getElementById('render').style.display = ''; } }
-  });
-}
+/* Product Poster：从服务器读取并渲染 */
+renderSection('/api/pposter', document.getElementById('pposterGrid'), 'Product Poster');
+
+/* 3D Product Tag：从服务器读取并渲染 */
+renderSection('/api/render', document.getElementById('renderGrid'), '3D Product Tag');
 
 /* 电商作品画廊 */
 const gallery = document.getElementById('gallery');
