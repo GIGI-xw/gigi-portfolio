@@ -424,32 +424,6 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
   </div>
 </section>
 
-<!-- ================= 精选轮播 ================= -->
-<section class="feat" id="featured">
-  <div class="sec-head reveal">
-    <div>
-      <span class="eyebrow">精选</span>
-      <h2>代表项目</h2>
-    </div>
-    <div class="sec-meta">
-      <span class="mono">左右滑动 / 拖拽</span>
-    </div>
-  </div>
-
-  <div class="feat-track-wrap" id="featWrap">
-    <div class="feat-track" id="featTrack"><!-- JS 注入 --></div>
-  </div>
-
-  <div class="feat-ctrl">
-    <span class="feat-count"><b id="featIdx">01</b> / <span id="featTotal">04</span></span>
-    <div class="feat-progress"><span id="featBar"></span></div>
-    <div class="feat-arrows">
-      <button id="featPrev" aria-label="上一个"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M15 5l-7 7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <button id="featNext" aria-label="下一个"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    </div>
-  </div>
-</section>
-
 <!-- ================= 电商作品集（文件夹驱动） ================= -->
 <section class="ecom" id="ecom">
   <div class="sec-head reveal ecom-head">
@@ -486,28 +460,16 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
   <div class="vi-grid" id="posterGrid"></div>
 </section>
 
-<!-- ================= 作品分类 ================= -->
-<section class="work" id="work">
-  <div class="sec-head reveal">
+<!-- ================= 建模渲染（文件夹驱动，待添加） ================= -->
+<section class="vi" id="render" style="display:none;">
+  <div class="sec-head reveal ecom-head">
     <div>
-      <span class="eyebrow">全部作品</span>
-      <h2>作品档案</h2>
+      <span class="eyebrow">建模渲染</span>
+      <h2>三维产品视觉</h2>
     </div>
-    <div class="sec-meta">
-      <span class="mono">5 个方向 · 点击查看案例</span>
-    </div>
+    <p>从建模到材质光影，为产品打造高品质三维渲染图。</p>
   </div>
-
-  <div class="work-filters reveal" id="filters">
-    <button class="filter-btn active" data-f="all">全部</button>
-    <button class="filter-btn" data-f="ecom">跨境电商主图</button>
-    <button class="filter-btn" data-f="aplus">A+ 详情页</button>
-    <button class="filter-btn" data-f="vi">VI 设计</button>
-    <button class="filter-btn" data-f="poster">海报设计</button>
-    <button class="filter-btn" data-f="render">建模渲染</button>
-  </div>
-
-  <div id="cats"><!-- JS 注入分类 --></div>
+  <div class="vi-grid" id="renderGrid"></div>
 </section>
 
 <!-- ================= 关于 ================= -->
@@ -517,30 +479,22 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
       <span class="eyebrow">关于</span>
       <h2>关于我</h2>
     </div>
-    <div class="sec-meta"><span class="mono">设计师 / 自由职业 / 6 年</span></div>
   </div>
 
-  <div class="about-body">
+  <div class="about-body" style="grid-template-columns:1fr;">
     <div class="about-text reveal">
       <h3>把<b>品牌</b>、<b>电商</b>与<b>质感</b>拧成一根线，<br>让每个产品都被认真看见。</h3>
-      <p>6 年视觉设计经验，长期服务跨境电商与新消费品牌。从一张主图的视觉钩子，到一整套 VI 的系统语言，再到建模渲染的材质光影，我习惯把"策略—视觉—执行"串成闭环。</p>
+      <p>擅长做出符合大众审美的设计，也会设计充满市井气息的本土咖啡品牌的 VI 视觉。</p>
       <p>相信克制比堆砌更有力量：好的设计是减法，是让信息自己说话，让质感藏在细节里。</p>
 
       <div class="about-stats">
-        <div class="st"><b>120<span style="color:var(--blue)">+</span></b><span>交付项目</span></div>
-        <div class="st"><b>38</b><span>合作品牌</span></div>
-        <div class="st"><b>6</b><span>年从业经验</span></div>
-        <div class="st"><b>9.8<span style="color:var(--blue)">/10</span></b><span>客户复购率</span></div>
+        <div class="st"><b>32</b><span>交付项目</span></div>
+        <div class="st"><b>6</b><span>合作品牌</span></div>
       </div>
 
       <div class="skills">
-        <span>Photoshop</span><span>Illustrator</span><span>Figma</span><span>Blender</span><span>KeyShot</span><span>Cinema 4D</span><span>After Effects</span><span>品牌系统</span><span>电商视觉</span><span>三维渲染</span>
+        <span>Photoshop</span><span>Illustrator</span><span>Figma</span><span>Blender</span><span>KeyShot</span><span>Cinema 4D</span><span>品牌系统</span><span>电商视觉</span><span>三维渲染</span>
       </div>
-    </div>
-
-    <div class="about-portrait reveal">
-      <div class="frame"><img alt="设计师工作照" data-src /></div>
-      <span class="tag">视觉设计师 · GIGI</span>
     </div>
   </div>
 </section>
@@ -566,8 +520,6 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
     <div class="ci">
       <div class="lbl">社交</div>
       <div class="soc">
-        <a href="#" >Behance / GIGI-Studio</a>
-        <a href="#">站酷 / GIGI设计</a>
         <a href="https://www.xiaohongshu.com/user/profile/5ae7cf924eacab2dc741d10d" target="_blank" rel="noopener">小红书 / @gigi.design</a>
       </div>
     </div>
@@ -623,129 +575,6 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
 
 <script>
 /* ============================================================
-   图片生成（统一来源）
-   ============================================================ */
-const IMG = (prompt,size="landscape_4_3") =>
-  `https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=${encodeURIComponent(prompt)}&image_size=${size}`;
-
-/* ============================================================
-   精选项目数据
-   ============================================================ */
-const FEATURED = [
-  { num:"01", title:"Aurora 智能音响", cat:"建模渲染", yr:"2026",
-    img: IMG("High-end 3D product render of a minimalist smart speaker, matte dark body with subtle blue ambient glow, studio lighting, dark charcoal background, octane render, premium product visualization","landscape_4_3") },
-  { num:"02", title:"NORDIC 家居品牌 VI", cat:"VI 设计", yr:"2025",
-    img: IMG("Brand identity design mockup, minimalist geometric logo system on dark stationery and business cards, black white and electric blue accent, premium branding presentation","landscape_4_3") },
-  { num:"03", title:"PULSE 跨境主图系列", cat:"跨境电商主图", yr:"2025",
-    img: IMG("Cross-border e-commerce main product image, premium wireless earbuds on a dark concrete pedestal, dramatic studio lighting, moody dark background, high-end product photography","landscape_4_3") },
-  { num:"04", title:"TYPO 声音海报", cat:"海报设计", yr:"2026",
-    img: IMG("Editorial poster design, bold experimental typographic composition, black white and electric blue, swiss graphic design, high contrast, gallery poster","landscape_4_3") },
-];
-
-/* ============================================================
-   分类作品数据
-   ============================================================ */
-const CATS = [
-  { id:"ecom", idx:"01", title:"跨境电商主图", desc:"主图视觉钩子 / 场景化卖点 / 多平台适配" , items:[
-    { t:"蓝牙耳机主图", c:"Amazon", sz:"sz-a", img:IMG("Cross-border e-commerce hero product image of wireless earbuds, floating product on dark gradient background, blue light accents, clean premium look","landscape_4_3") },
-    { t:"智能手表主图", c:"Shopee", sz:"sz-b", img:IMG("E-commerce main image of a smart watch, dark moody studio shot, blue rim light, premium product photography","portrait_4_3") },
-    { t:"香薰机主图", c:"独立站", sz:"sz-c", img:IMG("Aromatherapy diffuser product main image, dark scene with soft blue mist, minimalist, high-end ecommerce","square") },
-  ]},
-  { id:"aplus", idx:"02", title:"A+ 详情页", desc:"长图叙事 / 模块化结构 / 转化导向" , items:[
-    { t:"空气净化器 A+", c:"戴森风格", sz:"sz-d", img:IMG("Ecommerce A+ product detail page section, air purifier in a dark modern living room scene, blue accent lighting, editorial layout","landscape_4_3") },
-    { t:"护肤套装 A+", c:"新消费", sz:"sz-e", img:IMG("Skincare set product detail page, dark luxurious scene, blue lighting, minimalist premium cosmetic photography","portrait_4_3") },
-    { t:"咖啡机 A+", c:"跨境品牌", sz:"sz-f", img:IMG("Coffee machine product detail page layout, dark scene with warm blue accents, premium appliance photography","landscape_4_3") },
-  ]},
-  { id:"vi", idx:"03", title:"VI 设计", desc:"品牌语言系统 / 应用延展 / 规范手册" , items:[
-    { t:"NORDIC 家居 VI", c:"品牌系统", sz:"sz-a", img:IMG("Brand identity system presentation, minimalist logo variations on dark stationery, blue accent, premium branding mockup","landscape_4_3") },
-    { t:"海丰 · 本土咖啡 VI", c:"本土品牌", sz:"sz-b", img:IMG("Local coffee brand identity with a hometown street-market feel, minimalist logo on a dark coffee cup and kraft packaging, blue accent, grounded yet premium branding mockup","portrait_4_3") },
-    { t:"ATELIER 工作室", c:"个人品牌", sz:"sz-c", img:IMG("Design studio brand identity, geometric logo on dark business card, blue accent, minimalist branding","square") },
-  ]},
-  { id:"poster", idx:"04", title:"海报设计", desc:"视觉海报 / 字体实验 / 活动主视觉" , items:[
-    { t:"声音艺术节海报", c:"主视觉", sz:"sz-a", img:IMG("Experimental sound art festival poster, bold typography, black white and electric blue, swiss design, high contrast","landscape_4_3") },
-    { t:"字体实验 No.7", c:"Type Lab", sz:"sz-b", img:IMG("Typographic experiment poster, abstract letterforms, black white and blue, high contrast, gallery poster","portrait_4_3") },
-    { t:"展览主视觉", c:"当代艺术", sz:"sz-c", img:IMG("Contemporary art exhibition poster, minimalist geometric composition, black white and electric blue","square") },
-  ]},
-  { id:"render", idx:"05", title:"建模渲染", desc:"产品三维 / 材质光影 / 场景渲染" , items:[
-    { t:"Aurora 智能音响", c:"KeyShot", sz:"sz-a", img:IMG("3D render of a minimalist smart speaker, dark matte body, blue ambient glow, studio lighting, octane render","landscape_4_3") },
-    { t:"瓶器建模", c:"Blender", sz:"sz-b", img:IMG("3D render of a premium cosmetic bottle, dark scene, blue rim lighting, glass and metal material, octane render","portrait_4_3") },
-    { t:"概念产品", c:"C4D", sz:"sz-g", img:IMG("3D render of an abstract concept product, geometric forms, dark studio, electric blue lighting, octane render, cinematic","landscape_16_9") },
-  ]},
-];
-
-/* 案例详情文案池 */
-const CASES = {
-  sub:"从策略到视觉的完整交付，围绕产品核心卖点构建一套可复用、可延展的视觉语言。",
-  grid:[ ["客户","未公开"],["角色","主视觉设计"],["周期","3 周"],["年份","2026"] ],
-  bg:"品牌需要一套差异化的视觉语言来打开跨境市场，既要在平台信息流中第一眼抓住注意力，又要保持品牌质感不被算法稀释。",
-  proc:"先拆解产品核心卖点与目标人群，确定视觉钩子；再用克制的色彩与材质把卖点可视化；最后输出多平台、多尺寸的可复用模版。",
-  res:"主图点击率较上一版提升明显，详情页停留时长增加，视觉模版在团队内沉淀为可复用资产。"
-};
-
-/* ============================================================
-   渲染：精选轮播
-   ============================================================ */
-const featTrack = document.getElementById('featTrack');
-FEATURED.forEach(f=>{
-  const el = document.createElement('div');
-  el.className = 'feat-item reveal';
-  el.innerHTML = `
-    <div class="feat-img"><img src="${f.img}" alt="${f.title}" loading="lazy">
-      <span class="feat-num">${f.num}</span>
-    </div>
-    <div class="feat-meta">
-      <div><h3>${f.title}</h3><div class="cat">${f.cat}</div></div>
-      <span class="yr">${f.yr}</span>
-    </div>`;
-  el.addEventListener('click',()=>openModal(f));
-  featTrack.appendChild(el);
-});
-document.getElementById('featTotal').textContent = String(FEATURED.length).padStart(2,'0');
-
-/* ============================================================
-   渲染：分类网格
-   ============================================================ */
-const catsWrap = document.getElementById('cats');
-CATS.forEach(cat=>{
-  const block = document.createElement('div');
-  block.className='cat-block reveal';
-  block.dataset.cat = cat.id;
-  let grid = '';
-  cat.items.forEach(it=>{
-    grid += `
-      <article class="work-card ${it.sz}" data-cat="${cat.id}" tabindex="0" role="button"
-        data-title="${it.t}" data-catname="${cat.title}" data-img="${it.img}">
-        <div class="wi"><img src="${it.img}" alt="${it.t}" loading="lazy">
-          <div class="ovr"><div class="vt">${it.t}</div><div class="vc">查看案例 →</div></div>
-        </div>
-        <div class="cap"><span class="t">${it.t}</span><span class="c">${it.c}</span></div>
-      </article>`;
-  });
-  block.innerHTML = `
-    <div class="cat-head"><span class="idx">${cat.idx}</span><h3>${cat.title}</h3><span class="desc">${cat.desc}</span></div>
-    <div class="grid">${grid}</div>`;
-  catsWrap.appendChild(block);
-});
-
-/* 头像 */
-document.querySelector('.about-portrait .frame img').src =
-  IMG("Portrait of a creative designer in a dark studio, side lighting, blue accent, moody high-end editorial photography","portrait_4_3");
-
-/* 分类过滤 */
-document.getElementById('filters').addEventListener('click',e=>{
-  const b = e.target.closest('.filter-btn'); if(!b) return;
-  document.querySelectorAll('.filter-btn').forEach(x=>x.classList.toggle('active', x===b));
-  const f = b.dataset.f;
-  document.querySelectorAll('.cat-block').forEach(bl=>{
-    bl.style.display = (f==='all'||bl.dataset.cat===f)?'':'none';
-  });
-});
-catsWrap.addEventListener('click',e=>{
-  const card = e.target.closest('.work-card'); if(!card) return;
-  openModal({ title:card.dataset.title, cat:card.dataset.catname, img:card.dataset.img });
-});
-
-/* ============================================================
    开屏 几何切割
    ============================================================ */
 const loader = document.getElementById('loader');
@@ -755,7 +584,6 @@ const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function runLoader(){
   if(reduceMotion){ endLoader(); return; }
-  // 面板初始覆盖
   panels.forEach(p=>{ p.style.transition='transform 1s var(--ease-out-expo)'; p.style.transform='translateY(0)'; });
   let n = 0;
   const tick = ()=>{
@@ -767,7 +595,6 @@ function runLoader(){
   setTimeout(tick, 350);
 }
 function finishReveal(){
-  // 几何切割：奇偶面板向上下错开切割
   panels.forEach((p,i)=>{
     const dir = (i%2===0)? -1 : 1;
     p.style.transitionDelay = (i*0.07)+'s';
@@ -792,15 +619,9 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches && !reduceMotion){
   let mx=innerWidth/2,my=innerHeight/2, rx=mx, ry=my;
   addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY; dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`; });
   (function loop(){ rx+=(mx-rx)*0.18; ry+=(my-ry)*0.18; ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`; requestAnimationFrame(loop); })();
-  const hoverSel='a,button,.work-card,.feat-item,.filter-btn,.magnet,.modal-close';
-  document.addEventListener('mouseover',e=>{
-    if(e.target.closest(hoverSel)) ring.classList.add('hover');
-    if(e.target.closest('.work-card,.feat-item')) ring.classList.add('view');
-  });
-  document.addEventListener('mouseout',e=>{
-    if(e.target.closest(hoverSel)) ring.classList.remove('hover');
-    if(e.target.closest('.work-card,.feat-item')) ring.classList.remove('view');
-  });
+  const hoverSel='a,button,.magnet';
+  document.addEventListener('mouseover',e=>{ if(e.target.closest(hoverSel)) ring.classList.add('hover'); });
+  document.addEventListener('mouseout',e=>{ if(e.target.closest(hoverSel)) ring.classList.remove('hover'); });
 }
 
 /* ============================================================
@@ -818,47 +639,14 @@ function revealLines(sel){
 }
 function kickReveals(){
   revealLines('.hero-title');
-  // 其余滚动揭示交给 observer
+  revealLines('.contact-mega');
 }
 
 /* IntersectionObserver 滚动揭示 */
 const io = new IntersectionObserver((ents)=>{
-  ents.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in');
-    if(en.target.matches('.contact-mega')) revealLines('.contact-mega');
-    en.target.querySelectorAll && en.target.querySelectorAll('.line > span').forEach(s=> s.classList.add('in'));
-    io.unobserve(en.target); } });
+  ents.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
 },{threshold:0.15});
 document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
-
-/* ============================================================
-   精选轮播交互：拖拽 + 按钮 + 惯性
-   ============================================================ */
-const wrap = document.getElementById('featWrap');
-let curX=0, startX=0, dragStart=0, dragging=false, maxScroll=0;
-function recalcMax(){ maxScroll = Math.max(0, featTrack.scrollWidth - wrap.clientWidth + 2); }
-function setX(x,noTrans){
-  curX = Math.max(-maxScroll, Math.min(0, x));
-  featTrack.classList.toggle('no-trans', !!noTrans);
-  featTrack.style.transform = `translateX(${curX}px)`;
-  updateProgress();
-}
-function updateProgress(){
-  const i = Math.min(FEATURED.length, Math.round((-curX) / (featTrack.scrollWidth/FEATURED.length))+1);
-  document.getElementById('featIdx').textContent = String(Math.max(1,i)).padStart(2,'0');
-  const pct = maxScroll? (-curX/maxScroll)*100 : 0;
-  document.getElementById('featBar').style.width = pct + '%';
-}
-const step = ()=> featTrack.firstElementChild.offsetWidth + parseFloat(getComputedStyle(featTrack).gap||0);
-document.getElementById('featNext').addEventListener('click',()=> setX(curX - step()*1.4));
-document.getElementById('featPrev').addEventListener('click',()=> setX(curX + step()*1.4));
-
-wrap.addEventListener('pointerdown',e=>{ dragging=true; startX=e.clientX; dragStart=curX; featTrack.classList.add('no-trans'); wrap.setPointerCapture(e.pointerId); });
-wrap.addEventListener('pointermove',e=>{ if(!dragging) return; setX(dragStart + (e.clientX-startX), true); });
-wrap.addEventListener('pointerup',e=>{ dragging=false; featTrack.classList.remove('no-trans'); /* 吸附到最近项 */ const s=step(); setX(Math.round(curX/s)*s); });
-wrap.addEventListener('pointercancel',()=>{ dragging=false; featTrack.classList.remove('no-trans'); });
-
-addEventListener('resize',()=>{ recalcMax(); setX(curX,true); });
-requestAnimationFrame(()=>{ recalcMax(); updateProgress(); });
 
 /* ============================================================
    磁吸按钮
@@ -874,40 +662,50 @@ if(magnet && matchMedia('(hover:hover)').matches){
   magnet.addEventListener('mouseleave',()=> magnet.style.transform='');
 }
 
-/* ============================================================
-   作品详情弹窗
-   ============================================================ */
-const modal=document.getElementById('modal');
-function openModal(d){
-  document.getElementById('modalHero').src = d.img;
-  document.getElementById('modalCat').textContent = d.cat||'案例';
-  document.getElementById('modalTitle').textContent = d.title;
-  document.getElementById('modalSub').textContent = CASES.sub;
-  document.getElementById('modalGrid').innerHTML = CASES.grid.map(g=>`<div class="mg"><div class="l">${g[0]}</div><div class="v">${g[1]}</div></div>`).join('');
-  document.getElementById('modalBg2').textContent = CASES.bg;
-  document.getElementById('modalProc').textContent = CASES.proc;
-  document.getElementById('modalRes').textContent = CASES.res;
-  document.getElementById('modalShots').innerHTML = [0,1,2,3].map(()=>`<img src="${IMG('project detail work in progress, dark studio, blue accent, design process photography','landscape_4_3')}" alt="过程图">`).join('');
-  modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
-  document.body.classList.add('lock');
-}
-function closeModal(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('lock'); }
-document.getElementById('modalClose').addEventListener('click',closeModal);
-document.getElementById('modalBg').addEventListener('click',closeModal);
-addEventListener('keydown',e=>{ if(e.key==='Escape' && modal.classList.contains('open')) closeModal(); });
-
 /* 移动端菜单占位（简单滚动） */
 document.querySelectorAll('.nav-links a, .nav-cta, .nav-logo').forEach(a=>{
   a.addEventListener('click',()=> nav.classList.remove('nav-open'));
 });
 
-/* 电商作品集：从服务器读取文件夹并渲染 */
+/* 通用：渲染文件夹驱动板块 */
+function renderSection(api,gridEl,typeName,labelData){
+  let data = [];
+  fetch(api).then(r=>r.json()).then(list=>{
+    data = list;
+    if(!list.length){
+      gridEl.innerHTML = `<div class="ecom-empty">还没有${typeName}作品文件夹</div>`;
+      return;
+    }
+    gridEl.innerHTML = list.map((w,idx)=>`
+      <article class="ecom-card vi-card" data-i="${idx}">
+        <img src="${w.cover}" alt="${w.name}" loading="lazy">
+        <span class="ec-view">VIEW · ${w.count}</span>
+        <div class="ec-overlay">
+          <div class="ec-name">${w.name}</div>
+          <div class="ec-meta">${w.count} 张 · ${typeName}</div>
+        </div>
+      </article>`).join('');
+    gridEl.querySelectorAll('.vi-card').forEach(c=>{
+      c.addEventListener('click',()=> openGallery(data[parseInt(c.dataset.i,10)]));
+      if(window.matchMedia('(pointer:fine)').matches && window.cursor){
+        c.addEventListener('mouseenter',()=>cursor.classList.add('big'));
+        c.addEventListener('mouseleave',()=>cursor.classList.remove('big'));
+      }
+    });
+    if(typeof kickReveals==='function') kickReveals();
+    if(labelData && labelData.onReady){ labelData.onReady(); }
+  }).catch(()=>{
+    gridEl.innerHTML = `<div class="ecom-empty">读取${typeName}作品失败</div>`;
+  });
+}
+
+/* 电商作品集：从服务器读取并渲染 */
 const ecomGrid = document.getElementById('ecomGrid');
 let ecomData = [];
 fetch('data/works.json').then(r=>r.json()).then(list=>{
   ecomData = list;
   if(!list.length){
-    ecomGrid.innerHTML = '<div class="ecom-empty">还没有作品文件夹 · 把图片放入文件夹后刷新</div>';
+    ecomGrid.innerHTML = '<div class="ecom-empty">还没有作品文件夹</div>';
     return;
   }
   ecomGrid.innerHTML = list.map((w,idx)=>`
@@ -921,75 +719,29 @@ fetch('data/works.json').then(r=>r.json()).then(list=>{
     </article>`).join('');
   ecomGrid.querySelectorAll('.ecom-card').forEach(c=>{
     c.addEventListener('click',()=> openGallery(ecomData[parseInt(c.dataset.i,10)]));
-    if(window.matchMedia('(pointer:fine)').matches){
+    if(window.matchMedia('(pointer:fine)').matches && window.cursor){
       c.addEventListener('mouseenter',()=>cursor.classList.add('big'));
       c.addEventListener('mouseleave',()=>cursor.classList.remove('big'));
     }
   });
   if(typeof kickReveals==='function') kickReveals();
 }).catch(()=>{
-  ecomGrid.innerHTML = '<div class="ecom-empty">读取作品失败 · 请确认本地服务器在运行</div>';
+  ecomGrid.innerHTML = '<div class="ecom-empty">读取作品失败</div>';
 });
 
 /* 品牌 VI 设计：从服务器读取并渲染 */
-const viGrid = document.getElementById('viGrid');
-let viData = [];
-fetch('data/vi.json').then(r=>r.json()).then(list=>{
-  viData = list;
-  if(!list.length){
-    viGrid.innerHTML = '<div class="ecom-empty">还没有 VI 作品文件夹 · 在 vi.txt 添加路径后刷新</div>';
-    return;
-  }
-  viGrid.innerHTML = list.map((w,idx)=>`
-    <article class="ecom-card vi-card" data-i="${idx}">
-      <img src="${w.cover}" alt="${w.name}" loading="lazy">
-      <span class="ec-view">VIEW · ${w.count}</span>
-      <div class="ec-overlay">
-        <div class="ec-name">${w.name}</div>
-        <div class="ec-meta">${w.count} 张 · 品牌 VI</div>
-      </div>
-    </article>`).join('');
-  viGrid.querySelectorAll('.vi-card').forEach(c=>{
-    c.addEventListener('click',()=> openGallery(viData[parseInt(c.dataset.i,10)]));
-    if(window.matchMedia('(pointer:fine)').matches){
-      c.addEventListener('mouseenter',()=>cursor.classList.add('big'));
-      c.addEventListener('mouseleave',()=>cursor.classList.remove('big'));
-    }
-  });
-  if(typeof kickReveals==='function') kickReveals();
-}).catch(()=>{
-  viGrid.innerHTML = '<div class="ecom-empty">读取 VI 作品失败 · 请确认本地服务器在运行</div>';
-});
+renderSection('/api/vi', document.getElementById('viGrid'), '品牌 VI');
 
 /* 海报设计：从服务器读取并渲染 */
-const posterGrid = document.getElementById('posterGrid');
-let posterData = [];
-fetch('data/poster.json').then(r=>r.json()).then(list=>{
-  posterData = list;
-  if(!list.length){
-    posterGrid.innerHTML = '<div class="ecom-empty">还没有海报作品文件夹 · 在 poster.txt 添加路径后刷新</div>';
-    return;
-  }
-  posterGrid.innerHTML = list.map((w,idx)=>`
-    <article class="ecom-card vi-card" data-i="${idx}">
-      <img src="${w.cover}" alt="${w.name}" loading="lazy">
-      <span class="ec-view">VIEW · ${w.count}</span>
-      <div class="ec-overlay">
-        <div class="ec-name">${w.name}</div>
-        <div class="ec-meta">${w.count} 张 · 海报设计</div>
-      </div>
-    </article>`).join('');
-  posterGrid.querySelectorAll('.vi-card').forEach(c=>{
-    c.addEventListener('click',()=> openGallery(posterData[parseInt(c.dataset.i,10)]));
-    if(window.matchMedia('(pointer:fine)').matches){
-      c.addEventListener('mouseenter',()=>cursor.classList.add('big'));
-      c.addEventListener('mouseleave',()=>cursor.classList.remove('big'));
-    }
+renderSection('/api/poster', document.getElementById('posterGrid'), '海报设计');
+
+/* 建模渲染：从服务器读取并渲染（若有数据则显示板块） */
+const renderGrid = document.getElementById('renderGrid');
+if(renderGrid){
+  renderSection('/api/render', renderGrid, '建模渲染', {
+    onReady: ()=> { if(renderGrid.querySelectorAll('.vi-card').length){ document.getElementById('render').style.display = ''; } }
   });
-  if(typeof kickReveals==='function') kickReveals();
-}).catch(()=>{
-  posterGrid.innerHTML = '<div class="ecom-empty">读取海报作品失败 · 请确认本地服务器在运行</div>';
-});
+}
 
 /* 电商作品画廊 */
 const gallery = document.getElementById('gallery');
