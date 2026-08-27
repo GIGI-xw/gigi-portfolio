@@ -484,6 +484,18 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
   <div class="vi-grid" id="renderGrid"></div>
 </section>
 
+<!-- ================= Logo Design（文件夹驱动） ================= -->
+<section class="vi" id="logo">
+  <div class="sec-head reveal ecom-head">
+    <div>
+      <span class="eyebrow">Logo Design</span>
+      <h2>品牌标志设计</h2>
+    </div>
+    <p>为品牌打造识别度高的 Logo 视觉符号。</p>
+  </div>
+  <div class="vi-grid" id="logoGrid"></div>
+</section>
+
 <!-- ================= 关于 ================= -->
 <section class="about" id="about">
   <div class="sec-head reveal">
@@ -752,6 +764,9 @@ renderSection('/api/pposter', document.getElementById('pposterGrid'), 'Product P
 
 /* 3D Product Tag：从服务器读取并渲染 */
 renderSection('/api/render', document.getElementById('renderGrid'), '3D Product Tag');
+
+/* Logo Design：从服务器读取并渲染 */
+renderSection('/api/logo', document.getElementById('logoGrid'), 'Logo Design');
 
 /* 电商作品画廊 */
 const gallery = document.getElementById('gallery');
