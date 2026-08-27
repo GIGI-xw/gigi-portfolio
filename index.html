@@ -239,18 +239,38 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
 .about-text h3{ font-family:var(--f-display); font-weight:600; font-size:clamp(24px,3vw,40px); letter-spacing:-0.02em; line-height:1.12; margin-bottom:26px; }
 .about-text h3 b{ color:var(--blue); }
 .about-text p{ color:var(--bone-dim); font-size:clamp(15px,1.5vw,18px); margin-bottom:18px; max-width:54ch; }
-.about-stats{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); margin-top:34px; }
-.about-stats .st{ background:var(--ink); padding:22px 20px; }
-.about-stats .st b{ font-family:var(--f-display); font-weight:700; font-size:clamp(30px,4vw,46px); letter-spacing:-0.02em; display:block; line-height:1; }
+.about-stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:34px; }
+.about-stats .st{ background:var(--ink); padding:22px 20px; position:relative; overflow:hidden; transition:background .4s ease; }
+.about-stats .st::after{ content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--blue); transition:width .5s cubic-bezier(.4,0,.2,1); }
+.about-stats .st:hover{ background:#161616; }
+.about-stats .st:hover::after{ width:100%; }
+.about-stats .st b{ font-family:var(--f-display); font-weight:700; font-size:clamp(26px,3.5vw,42px); letter-spacing:-0.02em; display:block; line-height:1; }
 .about-stats .st span{ font-family:var(--f-mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--bone-mute); margin-top:8px; display:block; }
 .skills{ display:flex; flex-wrap:wrap; gap:8px; margin-top:30px; }
-.skills span{ font-family:var(--f-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--bone-dim); padding:7px 13px; border:1px solid var(--line); border-radius:30px; }
+.skills span{ font-family:var(--f-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--bone-dim); padding:7px 13px; border:1px solid var(--line); border-radius:30px; transition:all .3s ease; cursor:default; }
+.skills span:hover{ border-color:var(--blue); color:var(--blue); transform:translateY(-2px); }
+.about-clients{ margin-top:34px; }
+.about-clients h4{ font-family:var(--f-mono); font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(--bone-mute); margin-bottom:16px; }
+.client-row{ display:flex; flex-wrap:wrap; gap:12px; }
+.client-chip{ display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border:1px solid var(--line); border-radius:8px; font-size:13px; color:var(--bone-dim); transition:all .35s cubic-bezier(.4,0,.2,1); cursor:default; position:relative; overflow:hidden; }
+.client-chip::before{ content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent); transition:left .6s ease; }
+.client-chip:hover::before{ left:100%; }
+.client-chip:hover{ border-color:var(--blue); color:#fff; transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.4); }
+.client-chip .dot{ width:6px; height:6px; border-radius:50%; background:var(--blue); flex-shrink:0; }
+.about-awards{ margin-top:34px; padding:24px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(135deg,rgba(255,255,255,.02),transparent); position:relative; overflow:hidden; transition:border-color .4s ease; }
+.about-awards:hover{ border-color:rgba(255,255,255,.15); }
+.about-awards::before{ content:''; position:absolute; top:0; right:0; width:120px; height:120px; background:radial-gradient(circle,rgba(255,255,255,.03),transparent 70%); pointer-events:none; }
+.award-item{ display:flex; align-items:center; gap:16px; }
+.award-icon{ width:42px; height:42px; border-radius:50%; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; transition:all .4s ease; }
+.about-awards:hover .award-icon{ border-color:var(--blue); transform:rotate(360deg); }
+.award-text h4{ font-size:15px; font-weight:600; color:#fff; margin-bottom:4px; }
+.award-text p{ font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; color:var(--bone-mute); }
 
 .about-portrait{ position:relative; }
 .about-portrait .frame{ aspect-ratio:4/5; overflow:hidden; border:1px solid var(--line); background:var(--ink-2); }
 .about-portrait .frame img{ width:100%; height:100%; object-fit:cover; filter:grayscale(.4) contrast(1.04); }
 .about-portrait .tag{ position:absolute; bottom:-1px; left:-1px; background:var(--blue); color:var(--ink); font-family:var(--f-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; padding:10px 16px; }
-@media (max-width:860px){ .about-body{ grid-template-columns:1fr; } }
+@media (max-width:860px){ .about-body{ grid-template-columns:1fr; } .about-stats{ grid-template-columns:1fr 1fr; } }
 
 /* ============================================================
    联系
@@ -413,13 +433,13 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
     <span class="hero-loc">基于 深圳 / 远程协作<br>视觉 · 品牌 · 电商</span>
   </div>
 
-  <h1 class="hero-title" aria-label="视觉设计师 GIGI">
+  <h1 class="hero-title" aria-label="视觉设计师 GIGI 卓晓雯">
     <span class="line"><span data-d="0.05s">视觉</span></span>
     <span class="line"><span data-d="0.18s">设<span class="outln">计师</span></span></span>
   </h1>
 
   <div class="hero-sub">
-    <p>我是 GIGI，深圳视觉设计师。擅长做出符合大众审美的设计，也会为汕尾海丰的本土咖啡品牌做充满市井气息的 VI。用克制的结构与精确的质感，把每个产品讲成值得停留的故事。</p>
+    <p>我是 GIGI（卓晓雯），深圳视觉 / 产品设计师。做平面设计、视觉/交互设计、包装、海报与建模渲染。用克制的结构与精确的质感，把每个产品讲成值得停留的故事。</p>
     <span class="scroll-cue"><span class="bar"></span>向下滚动</span>
   </div>
 </section>
@@ -508,16 +528,37 @@ section{ position:relative; padding:clamp(90px,13vh,150px) var(--gut); }
   <div class="about-body" style="grid-template-columns:1fr;">
     <div class="about-text reveal">
       <h3>把<b>品牌</b>、<b>电商</b>与<b>质感</b>拧成一根线，<br>让每个产品都被认真看见。</h3>
-      <p>擅长做出符合大众审美的设计，也会设计充满市井气息的本土咖啡品牌的 VI 视觉。</p>
-      <p>相信克制比堆砌更有力量：好的设计是减法，是让信息自己说话，让质感藏在细节里。</p>
+      <p>我是 GiGi（卓晓雯），在深圳工作的平面 / 产品设计师。过去三年，为咖啡、展览、跨境电商、商业照明等文化或消费品牌建立外观以及视觉系统。</p>
+      <p>我不相信"风格堆砌"——相信每个品牌有它自己的气，设计师的工作是把它找出来，然后让更多人一眼认出来。</p>
 
-      <div class="about-stats">
-        <div class="st"><b>32</b><span>交付项目</span></div>
-        <div class="st"><b>6</b><span>合作品牌</span></div>
+      <div class="about-stats" id="aboutStats">
+        <div class="st"><b data-count="32">0</b><span>交付项目</span></div>
+        <div class="st"><b data-count="6">0</b><span>合作品牌</span></div>
+        <div class="st"><b data-count="3" data-suffix="+">0</b><span>年经验</span></div>
+        <div class="st"><b data-count="100" data-suffix="%">0</b><span>独立完成</span></div>
       </div>
 
-      <div class="skills">
-        <span>Photoshop</span><span>Illustrator</span><span>Figma</span><span>Blender</span><span>KeyShot</span><span>Cinema 4D</span><span>品牌系统</span><span>电商视觉</span><span>三维渲染</span>
+      <div class="about-clients reveal">
+        <h4>合作过</h4>
+        <div class="client-row">
+          <span class="client-chip"><span class="dot"></span>广州琶洲灯光展 - 康彩</span>
+          <span class="client-chip"><span class="dot"></span>日日咖啡</span>
+          <span class="client-chip"><span class="dot"></span>光影设计</span>
+        </div>
+      </div>
+
+      <div class="about-awards reveal">
+        <div class="award-item">
+          <div class="award-icon">&#9733;</div>
+          <div class="award-text">
+            <h4>全国工业世界大赛 二等奖</h4>
+            <p>RECOGNIZED EXCELLENCE IN INDUSTRIAL DESIGN</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills reveal">
+        <span>3DMAX</span><span>KeyShot</span><span>Photoshop</span><span>Illustrator</span><span>Rhinoceros 3D</span><span>SolidWorks</span><span>品牌系统</span><span>电商视觉</span><span>三维渲染</span>
       </div>
     </div>
   </div>
@@ -767,6 +808,29 @@ renderSection('/api/render', document.getElementById('renderGrid'), '3D Product 
 
 /* Logo Design：从服务器读取并渲染 */
 renderSection('/api/logo', document.getElementById('logoGrid'), 'Logo Design');
+
+/* 关于我数字计数动画 */
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('b[data-count]').forEach(el => {
+        const target = parseInt(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        let cur = 0;
+        const step = Math.max(1, Math.ceil(target / 40));
+        const tick = () => {
+          cur += step;
+          if (cur >= target) { el.textContent = target + suffix; }
+          else { el.textContent = cur + suffix; requestAnimationFrame(tick); }
+        };
+        tick();
+      });
+      statObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
+const aboutStatsEl = document.getElementById('aboutStats');
+if (aboutStatsEl) statObserver.observe(aboutStatsEl);
 
 /* 电商作品画廊 */
 const gallery = document.getElementById('gallery');
